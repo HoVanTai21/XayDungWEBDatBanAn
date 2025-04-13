@@ -1,6 +1,6 @@
 // Thanh Car Xào
 function loadCarMonXao() {
-  return fetch("CarMonXao.html") // Thêm return để đảm bảo trả về Promise
+  return fetch("../Car/CarMonXao.html") // Thêm return để đảm bảo trả về Promise
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("CarMonXao").innerHTML = data;
@@ -9,7 +9,7 @@ function loadCarMonXao() {
 }
 // Thanh Car Xào HS
 function loadCarMonXaoHS() {
-  return fetch("CarMonXaoHS.html") // Thêm return để đảm bảo trả về Promise
+  return fetch("../Car/CarMonXaoHS.html") // Thêm return để đảm bảo trả về Promise
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("CarMonXaoHS").innerHTML = data;
@@ -20,7 +20,7 @@ function loadCarMonXaoHS() {
 //  thanh Car
 
 function loadCar() {
-  return fetch("Car.html") // Thêm return để đảm bảo trả về Promise
+  return fetch("../Car/Car.html") // Thêm return để đảm bảo trả về Promise
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("container-card").innerHTML = data;
