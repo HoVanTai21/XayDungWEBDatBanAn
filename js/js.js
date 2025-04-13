@@ -27,8 +27,39 @@ function loadCar() {
     })
     .catch((error) => console.log(" Lỗi khi tải card:", error));
 }
+
+// Thanh Car Món Nước Ăn Sáng
+function loadCarMonNuocAnSang() {
+  return fetch("../Car/CarMonNuocAnSang.html") // Thêm return để đảm bảo trả về Promise
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("CarMonNuocAnSang").innerHTML = data;
+    })
+    .catch((error) => console.log(" Lỗi khi tải card:", error));
+}
+// Thanh Car Món Ăn Trưa
+function loadCarMonAnTrua() {
+  return fetch("../Car/CarMonAnTrua.html") // Thêm return để đảm bảo trả về Promise
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("CarMonAnTrua").innerHTML = data;
+    })
+    .catch((error) => console.log(" Lỗi khi tải card:", error));
+}
+// Thanh Car Món Lẩu
+function loadCarMonLau() {
+  return fetch("../Car/CarMonLau.html") // Thêm return để đảm bảo trả về Promise
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("CarMonLau").innerHTML = data;
+    })
+    .catch((error) => console.log(" Lỗi khi tải card:", error));
+}
 window.onload = function () {
   loadCarMonXao();
   loadCarMonXaoHS();
   loadCar();
+  loadCarMonNuocAnSang();
+  loadCarMonAnTrua();
+  loadCarMonLau();
 };
