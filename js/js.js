@@ -55,6 +55,51 @@ function loadCarMonLau() {
     })
     .catch((error) => console.log(" Lỗi khi tải card:", error));
 }
+// Thanh Car Món Xào Chay
+function loadCarMonXaoChay() {
+  return fetch("../Car/CarMonXaoChay.html") // Thêm return để đảm bảo trả về Promise
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("CarMonXaoChay").innerHTML = data;
+    })
+    .catch((error) => console.log(" Lỗi khi tải card:", error));
+}
+// Thanh Car Món Nước Chay
+function loadCarMonNuocChay() {
+  return fetch("../Car/CarMonNuocChay.html") // Thêm return để đảm bảo trả về Promise
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("CarMonNuocChay").innerHTML = data;
+    })
+    .catch((error) => console.log(" Lỗi khi tải card:", error));
+}
+// Thanh Car Món Lẩu chay
+function loadCarMonLauChay() {
+  return fetch("../Car/CarMonLauChay.html") // Thêm return để đảm bảo trả về Promise
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("CarMonLauChay").innerHTML = data;
+    })
+    .catch((error) => console.log(" Lỗi khi tải card:", error));
+}
+// Thanh Car Món Chiên
+function loadCarMonChien() {
+  return fetch("../Car/CarMonChien.html") // Thêm return để đảm bảo trả về Promise
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("CarMonChien").innerHTML = data;
+    })
+    .catch((error) => console.log(" Lỗi khi tải card:", error));
+}
+// Thanh Car Món Lẩu chay
+function loadCarMonTraiCay() {
+  return fetch("../Car/CarMonTraiCay.html") // Thêm return để đảm bảo trả về Promise
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("CarMonTraiCay").innerHTML = data;
+    })
+    .catch((error) => console.log(" Lỗi khi tải card:", error));
+}
 window.onload = function () {
   loadCarMonXao();
   loadCarMonXaoHS();
@@ -62,4 +107,9 @@ window.onload = function () {
   loadCarMonNuocAnSang();
   loadCarMonAnTrua();
   loadCarMonLau();
+  loadCarMonXaoChay();
+  loadCarMonNuocChay();
+  loadCarMonLauChay();
+  loadCarMonChien();
+  loadCarMonTraiCay();
 };
